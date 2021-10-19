@@ -310,12 +310,12 @@ public class EmployeeResource {
 
 - Execute POST Request method to add a employee to the Database.
 
-    <img src="./images/img.PNG" />
+    <img src="https://github.com/2711-bharath/Spring-Boot-CRUD/blob/main/images/img.PNG" />
 
 - Execute GET Request method to get all employees to the Database.
 
-    <img src="./images/img1.PNG" />
+    <img src="https://github.com/2711-bharath/Spring-Boot-CRUD/blob/main/images/img1.PNG" />
 
 - Execute GET Request method to get employee by id to the Database.
 
-    <img src="./images/img2.PNG" />
+    <img src="https://github.com/2711-bharath/Spring-Boot-CRUD/blob/main/images/img2.PNG" />
