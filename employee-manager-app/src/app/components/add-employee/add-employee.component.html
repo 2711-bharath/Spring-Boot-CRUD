@@ -1,0 +1,63 @@
+<div class="row mt-4" *ngIf="formLoaded">
+    <div class="col-xl-3 col-md-2"></div>
+    <div class="col-xl-6 col-md-8 col-sm-12">
+        <form class="bg-white text-dark px-4 py-2 rounded shadow mx-3" [formGroup]="employeeForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="display-6 text-center">Employee Form</div>
+            <div class="my-2">
+                <label for="name" class="form-label">Name</label>
+                <input class="form-control" type="text" name="name" formControlName="name">
+                
+                <div *ngIf="!name?.valid && (name?.dirty || name?.touched || formSubmitted)">
+                    <div [hidden]="!name.errors.required">
+                        <div class="text-danger mt-2">* Name is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-2">
+                <label for="email" class="form-label">Email</label>
+                <input class="form-control" type="email" name="email" formControlName="email">
+                
+                <div *ngIf="!email?.valid && (email?.dirty || email?.touched || formSubmitted)">
+                    <div [hidden]="!email.errors.required">
+                        <div class="text-danger mt-2">* Email is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-2">
+                <label for="jobTitle" class="form-label">Job Title</label>
+                <input class="form-control" type="text" name="jobTitle" formControlName="jobTitle">
+                
+                <div *ngIf="!jobTitle?.valid && (jobTitle?.dirty || jobTitle?.touched || formSubmitted)">
+                    <div [hidden]="!jobTitle.errors.required">
+                        <div class="text-danger mt-2">* Job Title is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-2">
+                <label for="phone" class="form-label">Phone</label>
+                <input class="form-control" type="text" name="phone" formControlName="phone">
+                
+                <div *ngIf="!phone?.valid && (phone?.dirty || phone?.touched || formSubmitted)">
+                    <div [hidden]="!phone.errors.required">
+                        <div class="text-danger mt-2">* Phone is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-2">
+                <label for="imageUrl" class="form-label">Image URL</label>
+                <input class="form-control" type="text" name="imageUrl" formControlName="imageUrl">
+
+                <div *ngIf="!imageUrl?.valid && (imageUrl?.dirty || imageUrl?.touched || formSubmitted)">
+                    <div [hidden]="!imageUrl.errors.required">
+                        <div class="text-danger mt-2">* Image Url is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 mb-3 text-center">
+                <button type="submit" class="btn btn-outline-purple" *ngIf="id != null">Update Employee</button>
+                <button type="submit" class="btn btn-outline-purple" *ngIf="id == null">Add Employee</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-xl-3 col-md-2"></div>
+</div>
